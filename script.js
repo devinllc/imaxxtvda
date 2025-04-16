@@ -1,46 +1,3 @@
-var crsr = document.querySelector("#cursor")
-var crsrb = document.querySelector("#cursor-blur")
-document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + "px"
-  crsr.style.top = dets.y + "px"
-  crsrb.style.left = dets.x - 250 + "px"
-  crsrb.style.top = dets.y - 250 + "px"
-})
-
-
-gsap.to("#nav", {
-  backgroundColor: "#000",
-  duration: 0.5,
-  height: "100px",
-  scrollTrigger: {
-    trigger: "#nav",
-    scroller: "body",
-    // markers: true,
-    start: "top -10%",
-    end: "top -11%",
-    scrub: 1,
-  }
-})
-gsap.to("#main", {
-  backgroundColor: "#000",
-  scrollTrigger: {
-    trigger: "#main",
-    scroller: "body",
-    start: "top -25%",
-    end: "top -70%",
-    scrub: 2,
-
-  }
-})
-
-// function toggleMenu() {
-//   var navLinks = document.getElementById("nav-links");
-//   if (navLinks.style.display === "flex") {
-//       navLinks.style.display = "none";
-//   } else {
-//       navLinks.style.display = "flex";
-//   }
-// }
 function toggleMenu() {
   var nav = document.getElementById("nav");
   nav.classList.toggle("open");
@@ -141,62 +98,6 @@ window.addEventListener("resize", () => {
 setInterval(nextCarouselSlide, 5000);
 
 
-// PROJECSSS
-
-// document.getElementById("projects-link").addEventListener("click", function(event) {
-//     event.preventDefault(); // Prevent default link behavior
-
-//     const projectSec = document.querySelector(".projectsec");
-//     const moreIcon = document.querySelector(".more-icon");
-
-//     if (projectSec.style.display === "none" || projectSec.style.display === "") {
-//         projectSec.style.display = "flex";
-//         moreIcon.textContent = "🔼"; // Change icon to indicate "less"
-//     } else {
-//         projectSec.style.display = "none";
-//         moreIcon.textContent = "🔽"; // Change icon to indicate "more"
-//     }
-// });
-
-
-
-
-
-
-// document.getElementById('toggleButton').addEventListener('click', function () {
-//   const newsSection = document.getElementById('newsSection');
-
-//   // Check if the section is hidden or visible, then toggle the state
-//   if (newsSection.style.display === 'none' || newsSection.style.display === 'block') {
-//     newsSection.style.display = 'block';  // Show the section
-//     this.textContent = 'HIDE NEWS';
-//     this.style.fontSize = '18px'; // Change button text to "Show Less"
-//     this.style.fontFamily = 'Montserrat';
-//   } else {
-//     newsSection.style.display = 'none';  // Hide the section
-//     this.textContent = 'NEWS';  // Change button text back to "Show More"
-//     this.style.fontSize = '18px'; // Change button text to "Show Less"
-//     this.style.fontFamily = 'Montserrat';
-//   }
-// });
-
-
-// document.getElementById('toggleButton').addEventListener('click', function () {
-//   const newsSection = document.getElementById('newsSection');
-
-//   // Toggle the "visible" class to show or hide the section
-//   newsSection.classList.toggle('visible');
-
-//   // Change the button text accordingly
-//   if (newsSection.classList.contains('visible')) {
-//     this.textContent = 'HIDE NEWS';  // Show "Hide News"
-//   } else {
-//     this.textContent = 'NEWS';  // Show "Show News"
-//   }
-
-//   this.style.fontSize = '18px';  // Set font size
-//   this.style.fontFamily = 'Montserrat';  // Set font family
-// });
 
 // faqsssss
 document.addEventListener("DOMContentLoaded", function () {
